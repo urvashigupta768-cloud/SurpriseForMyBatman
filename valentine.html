@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine 💖</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+.box {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+#yes {
+    background: white;
+    color: #ff4d6d;
+}
+
+#no {
+    background: #ff4d6d;
+    color: white;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Will You Be My Valentine? 💕</h1>
+    <button id="yes">YES 💖</button>
+    <button id="no">NO 😝</button>
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
+
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+yesBtn.addEventListener("click", () => {
+    window.location.href = "cuddle.html";
+});
+</script>
+
+</body>
+</html>

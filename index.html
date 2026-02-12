@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Valentine ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff5f8f, #ff9a9e);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.names {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.heart {
+    font-size: 90px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.card {
+    background: rgba(255,255,255,0.25);
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 25px auto;
+}
+
+a.button {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background: white;
+    color: #ff4d6d;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="heart">❤️</div>
+
+<h1>Happy Valentine’s Day</h1>
+
+<div class="names">
+  My Love NikhiL This is only for You❤️
+</div>
+
+<div class="card">
+   Bacha I know abhi hum dono ek dusre se bahut door hai aur kabhi mile bhi nahi hai, but my heart lives right next to yours... 💞
+</div>
+
+<div class="card">
+    We have been together for  
+    <h2 id="daysTogether"></h2>
+    and counting till the end. 💖
+</div>
+
+<a href="valentine.html" class="button">
+    Here's Something Special For You 💌
+</a>
+
+</div>
+
+<script>
+const startDate = new Date("2025-10-10"); // CHANGE CONFESSION DATE
+const today = new Date();
+
+const diffTime = today - startDate;
+const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+document.getElementById("daysTogether").innerText = days + " Days❤️";
+</script>
+
+</body>
+</html>
